@@ -1,0 +1,125 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Interactive Pet & House Sitter Business Checklist | Renee Wright</title><style>
+body{margin:0;background:#f7f5ee;color:#243e32;font-family:'Work Sans',sans-serif}
+.app-shell{width:100%;max-width:1060px;margin:auto;padding:40px 24px}
+h1{font-family:'Fraunces',serif;font-size:38px;line-height:1.16;max-width:760px}
+h2{font-family:'Fraunces',serif;font-size:24px}
+p{line-height:1.6}
+.page-strip{display:flex;justify-content:space-between;align-items:center;gap:16px;border:1px solid #dce3d8;border-radius:12px;padding:15px 20px;margin-bottom:24px;background:#eaf0e5}
+.page-badge{border-radius:99px;padding:6px 13px;background:#315d43;color:white;white-space:nowrap;font-size:13px;font-weight:600}
+.guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:30px}
+.guide-card{border:1px solid #dce3d8;border-radius:20px;padding:24px;background:#fff}
+.guide-card p{margin-top:12px}
+.check-card{border:1px solid #dce3d8;border-radius:20px;overflow:hidden;background:#fff;margin-top:18px;box-shadow:0 6px 22px #233e3205}
+summary{cursor:pointer;list-style:none;padding:24px;display:flex;align-items:center;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary .chevron{margin-left:auto;transition:transform .2s}
+details[open] .chevron{transform:rotate(180deg)}
+.step{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:#eaf0e5;font-weight:700;flex-shrink:0}
+.card-content{padding:0 24px 24px}
+.item-row{display:flex;align-items:flex-start;gap:12px;padding:13px 0;border-bottom:1px solid #edf0e9;cursor:pointer;min-height:48px}
+input[type=checkbox]{width:21px;height:21px;accent-color:#336447;flex-shrink:0;margin-top:2px;cursor:pointer}
+.item-row:has(input:checked) .item-copy{color:#5d7063;text-decoration:line-through;text-decoration-color:#afc1b0}
+textarea{display:block;width:100%;min-height:104px;padding:13px;border:1px solid #cbd5c8;border-radius:12px;background:#fbfcf8;color:#243e32;resize:vertical;margin-top:8px}
+progress{appearance:none;width:100%;height:7px;border:0;border-radius:99px;overflow:hidden;background:#e4e9df}
+progress::-webkit-progress-bar{background:#e4e9df}
+progress::-webkit-progress-value{background:#42784f;border-radius:99px}
+progress::-moz-progress-bar{background:#42784f}
+button{padding:11px 16px;border-radius:10px;font-weight:600;min-height:44px}
+button:hover{filter:brightness(.96)}
+button:disabled{opacity:.55;cursor:wait}
+.nav-button{background:#315d43;color:white;padding:16px 22px;margin-top:24px}
+:focus-visible{outline:3px solid #bd7c30;outline-offset:4px}
+.small-copy{font-size:13px}
+[hidden]{display:none!important}
+@media(max-width:600px){.app-shell{padding:26px 16px}h1{font-size:30px}summary{padding:18px;gap:12px}.card-content{padding:0 18px 20px}.guide-grid{grid-template-columns:1fr}.page-strip{padding:14px;flex-wrap:wrap}.nav-button{width:100%}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head>
+<body><div class="app-shell"><header><p class="small-copy" style="color:#315d43;font-weight:600">🐾 YOUR BUSINESS, ONE STEP AT A TIME</p></header><main><section id="checklist-view" aria-labelledby="title">
+     <header class="mb-8">
+      <div class="page-strip">
+       <span style="font-weight:600">PET &amp; HOUSE SITTER BUSINESS KIT</span> <span data-template-id="checklist-page-number" class="canva-tag page-badge" aria-current="page" style="background: rgb(49, 93, 67); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 13px;">INTERACTIVE CHECKLIST</span>
+      </div>
+      <nav aria-label="Return to first website page">
+       <a href="https://reneewright.club/pet-house-sitter-business-guide" class="nav-button mb-6" style="display:inline-block;text-decoration:none;margin-top:0">← BACK TO BUSINESS GUIDE</a>
+      </nav>
+      <h1 id="title" tabindex="-1" data-template-id="title" class="canva-text" style="color: rgb(36, 62, 50); font-weight: 600; font-style: normal; font-size: 38px; line-height: 1.16;">Biz Setup Checklist</h1>
+      <p data-template-id="subtitle" class="canva-text mt-4" style="color: rgb(83, 102, 89); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">Tick items off as you complete them and keep moving your business forward.</p>
+     </header>
+     <section data-template-id="overview" class="canva-panel rounded-2xl p-6 mb-6" style="background:#eaf0e5" aria-labelledby="overall-label">
+      <div class="flex justify-between items-center gap-4 mb-3">
+       <h2 id="overall-label" data-template-id="overall-label" class="canva-text" style="color: rgb(36, 62, 50); font-weight: 500; font-style: normal; font-size: 24px;">Your overall progress</h2><strong id="overall-count" class="text-2xl" aria-live="polite">0%</strong>
+      </div><progress id="overall-bar" value="0" max="33" aria-label="Overall completion"></progress>
+      <div class="flex flex-wrap justify-between gap-3 mt-3"><span id="total-count" class="small-copy">0 of 33 completed</span><span id="save-status" class="small-copy">Progress saves on this device</span>
+      </div>
+      <p class="small-copy mt-3" style="color:#536659">Your ticks and notes are saved privately in this browser on this device. Avoid storing client addresses, alarm codes or other sensitive information here.</p>
+     </section>
+     <fieldset id="check-controls" class="border-0 p-0 m-0 min-w-0">
+      <legend data-template-id="check-legend" class="canva-text sr-only" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Action checklists</legend>
+      <details data-template-id="setup-card" class="canva-card check-card" open="" style="background: rgb(255, 255, 255);">
+       <summary><span class="step" aria-hidden="true">01</span>
+        <div class="flex-1">
+         <h2 data-template-id="setup-title" class="canva-text" style="color: rgb(36, 62, 50); font-weight: 500; font-style: normal; font-size: 24px;">Setup Checklist</h2><span id="setup-count" class="small-copy">0 of 6 completed</span>
+        </div><i data-lucide="chevron-down" class="chevron" aria-hidden="true"></i></summary>
+       <div class="card-content">
+        <progress id="setup-bar" value="0" max="6" aria-label="Setup completion"></progress> <label class="item-row" for="setup_1"><input id="setup_1" type="checkbox"><span data-template-id="setup-1" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">I have chosen my core services</span></label> <label class="item-row" for="setup_2"><input id="setup_2" type="checkbox"><span data-template-id="setup-2" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">I have defined my service area</span></label> <label class="item-row" for="setup_3"><input id="setup_3" type="checkbox"><span data-template-id="setup-3" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">I have written down my available days and times</span></label> <label class="item-row" for="setup_4"><input id="setup_4" type="checkbox"><span data-template-id="setup-4" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">I have decided what I will and will not do</span></label> <label class="item-row" for="setup_5"><input id="setup_5" type="checkbox"><span data-template-id="setup-5" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">I have prepared a short professional introduction</span></label> <label class="item-row" for="setup_6"><input id="setup_6" type="checkbox"><span data-template-id="setup-6" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">I know how clients will contact me</span></label> <label for="setup_notes" data-template-id="setup-notes-label" class="canva-text block mt-6 font-semibold" style="color: rgb(36, 62, 50); font-weight: 600; font-style: normal; font-size: 16px;">Setup notes (optional)</label><textarea id="setup_notes" aria-describedby="notes-safety"></textarea> <button type="button" data-reset="setup" data-template-id="setup-reset" class="canva-button mt-4" style="background: rgb(238, 242, 233); color: rgb(49, 93, 67); font-weight: 600; font-style: normal; font-size: 16px;">Reset checklist</button>
+       </div>
+      </details>
+      <details data-template-id="meet-card" class="canva-card check-card" style="background: rgb(255, 255, 255);">
+       <summary><span class="step" aria-hidden="true">02</span>
+        <div class="flex-1">
+         <h2 data-template-id="meet-title" class="canva-text" style="color: rgb(36, 62, 50); font-weight: 500; font-style: normal; font-size: 24px;">Meet &amp; Greet Checklist</h2><span id="meet-count" class="small-copy">0 of 14 completed</span>
+        </div><i data-lucide="chevron-down" class="chevron" aria-hidden="true"></i></summary>
+       <div class="card-content">
+        <progress id="meet-bar" value="0" max="14" aria-label="Meet and greet completion"></progress> <label class="item-row" for="meet_1"><input id="meet_1" type="checkbox"><span data-template-id="meet-1" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Dates and times</span></label> <label class="item-row" for="meet_2"><input id="meet_2" type="checkbox"><span data-template-id="meet-2" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Full address</span></label> <label class="item-row" for="meet_3"><input id="meet_3" type="checkbox"><span data-template-id="meet-3" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Pet count and type</span></label> <label class="item-row" for="meet_4"><input id="meet_4" type="checkbox"><span data-template-id="meet-4" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Medical and behavioural needs</span></label> <label class="item-row" for="meet_5"><input id="meet_5" type="checkbox"><span data-template-id="meet-5" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Medication and instructions</span></label> <label class="item-row" for="meet_6"><input id="meet_6" type="checkbox"><span data-template-id="meet-6" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Bite, escape, anxiety, or reactivity risks</span></label> <label class="item-row" for="meet_7"><input id="meet_7" type="checkbox"><span data-template-id="meet-7" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Feeding, walking, sleeping, and toilet routines</span></label> <label class="item-row" for="meet_8"><input id="meet_8" type="checkbox"><span data-template-id="meet-8" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Property access</span></label> <label class="item-row" for="meet_9"><input id="meet_9" type="checkbox"><span data-template-id="meet-9" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Keys, gates, alarms, and security</span></label> <label class="item-row" for="meet_10"><input id="meet_10" type="checkbox"><span data-template-id="meet-10" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Emergency contacts and vet details</span></label> <label class="item-row" for="meet_11"><input id="meet_11" type="checkbox"><span data-template-id="meet-11" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Price, payment method, cancellation, and changes</span></label> <label class="item-row" for="meet_12"><input id="meet_12" type="checkbox"><span data-template-id="meet-12" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Pet information form completed</span></label> <label class="item-row" for="meet_13"><input id="meet_13" type="checkbox"><span data-template-id="meet-13" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Written agreement accepted</span></label> <label class="item-row" for="meet_14"><input id="meet_14" type="checkbox"><span data-template-id="meet-14" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">A clear next step</span></label> <label for="meet_notes" data-template-id="meet-notes-label" class="canva-text block mt-6 font-semibold" style="color: rgb(36, 62, 50); font-weight: 600; font-style: normal; font-size: 16px;">Meet &amp; greet notes (optional)</label><textarea id="meet_notes" aria-describedby="notes-safety"></textarea> <button type="button" data-reset="meet" data-template-id="meet-reset" class="canva-button mt-4" style="background: rgb(238, 242, 233); color: rgb(49, 93, 67); font-weight: 600; font-style: normal; font-size: 16px;">Reset checklist</button>
+       </div>
+      </details>
+      <details data-template-id="growth-card" class="canva-card check-card" style="background: rgb(255, 255, 255);">
+       <summary><span class="step" aria-hidden="true">03</span>
+        <div class="flex-1">
+         <h2 data-template-id="growth-title" class="canva-text" style="color: rgb(36, 62, 50); font-weight: 500; font-style: normal; font-size: 24px;">Business Growth Checklist</h2><span id="growth-count" class="small-copy">0 of 13 completed</span>
+        </div><i data-lucide="chevron-down" class="chevron" aria-hidden="true"></i></summary>
+       <div class="card-content">
+        <progress id="growth-bar" value="0" max="13" aria-label="Business growth completion"></progress> <label class="item-row" for="growth_1"><input id="growth_1" type="checkbox"><span data-template-id="growth-1" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Professional Facebook page ready</span></label> <label class="item-row" for="growth_2"><input id="growth_2" type="checkbox"><span data-template-id="growth-2" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Personalised advert ready</span></label> <label class="item-row" for="growth_3"><input id="growth_3" type="checkbox"><span data-template-id="growth-3" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">WhatsApp QR ready</span></label> <label class="item-row" for="growth_4"><input id="growth_4" type="checkbox"><span data-template-id="growth-4" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">WhatsApp group/automation set up</span></label> <label class="item-row" for="growth_5"><input id="growth_5" type="checkbox"><span data-template-id="growth-5" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Service area decided</span></label> <label class="item-row" for="growth_6"><input id="growth_6" type="checkbox"><span data-template-id="growth-6" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Services and extras decided</span></label> <label class="item-row" for="growth_7"><input id="growth_7" type="checkbox"><span data-template-id="growth-7" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Prices/packages set</span></label> <label class="item-row" for="growth_8"><input id="growth_8" type="checkbox"><span data-template-id="growth-8" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Agreement ready</span></label> <label class="item-row" for="growth_9"><input id="growth_9" type="checkbox"><span data-template-id="growth-9" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Pet medical/emergency form ready</span></label> <label class="item-row" for="growth_10"><input id="growth_10" type="checkbox"><span data-template-id="growth-10" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Emergency process ready</span></label> <label class="item-row" for="growth_11"><input id="growth_11" type="checkbox"><span data-template-id="growth-11" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Testimonial request ready</span></label> <label class="item-row" for="growth_12"><input id="growth_12" type="checkbox"><span data-template-id="growth-12" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Referral message ready</span></label> <label class="item-row" for="growth_13"><input id="growth_13" type="checkbox"><span data-template-id="growth-13" class="canva-text item-copy" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">Car magnet artwork ready</span></label> <label for="growth_notes" data-template-id="growth-notes-label" class="canva-text block mt-6 font-semibold" style="color: rgb(36, 62, 50); font-weight: 600; font-style: normal; font-size: 16px;">Business growth notes (optional)</label><textarea id="growth_notes" aria-describedby="notes-safety"></textarea> <button type="button" data-reset="growth" data-template-id="growth-reset" class="canva-button mt-4" style="background: rgb(238, 242, 233); color: rgb(49, 93, 67); font-weight: 600; font-style: normal; font-size: 16px;">Reset checklist</button>
+       </div>
+      </details>
+      <p id="notes-safety" data-template-id="notes-safety" class="canva-text small-copy mt-4" style="color: rgb(83, 102, 89); font-weight: 400; font-style: normal; font-size: 13px;">Use notes for business reminders, not client addresses, alarm codes, or private personal information.</p>
+      <div class="flex flex-wrap gap-3 mt-6">
+       <button id="download" type="button" data-template-id="download" class="canva-button" style="background: rgb(49, 93, 67); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">Save checklist (.txt)</button> <button type="button" data-reset="all" data-template-id="reset-all" class="canva-button" style="background: rgb(238, 242, 233); color: rgb(49, 93, 67); font-weight: 600; font-style: normal; font-size: 16px;">Reset all checklists</button>
+      </div>
+     </fieldset>
+     <section id="confirmation" hidden="" class="mt-5 rounded-xl border border-amber-300 p-5 bg-amber-50" aria-labelledby="confirm-title" tabindex="-1">
+      <h2 id="confirm-title" data-template-id="confirm-title" class="canva-text" style="color: rgb(36, 62, 50); font-weight: 500; font-style: normal; font-size: 24px;">Clear this progress?</h2>
+      <p data-template-id="confirm-copy" class="canva-text my-3" style="color: rgb(36, 62, 50); font-weight: 400; font-style: normal; font-size: 16px;">The selected checklist’s ticks and notes will be cleared. This cannot be undone.</p>
+      <p id="reset-scope" class="font-semibold mb-3"></p>
+      <div class="flex flex-wrap gap-3">
+       <button id="confirm-reset" type="button" data-template-id="confirm-reset" class="canva-button" style="background: rgb(49, 93, 67); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">Yes, clear progress</button> <button id="cancel-reset" type="button" data-template-id="cancel-reset" class="canva-button" style="background: rgb(255, 255, 255); color: rgb(49, 93, 67); font-weight: 600; font-style: normal; font-size: 16px;">Cancel</button>
+      </div>
+     </section>
+     <nav aria-label="Return to business guide" class="mt-8">
+      <a href="https://reneewright.club/pet-house-sitter-business-guide" style="display:inline-block;text-decoration:none;background:#eef2e9;color:#315d43;padding:11px 16px;border-radius:10px;font-weight:600">← BACK TO BUSINESS GUIDE</a>
+     </nav>
+    </section></main><footer style="margin-top:32px;border-top:1px solid #ddd;padding-top:18px"><p class="small-copy">© 2026 Renee Wright | reneewright.club</p></footer></div><script>
+const sizes={setup:6,meet:14,growth:13};
+const names={setup:'Setup Checklist',meet:'Meet & Greet Checklist',growth:'Business Growth Checklist',all:'All checklists'};
+const inputs=[...document.querySelectorAll('#checklist-view input[type=checkbox],#checklist-view textarea')];
+const KEY='renee_pet_house_sitter_checklist_v1';
+let state={},resetTarget=null,resetTrigger=null;
+inputs.forEach(el=>state[el.id]=el.type==='checkbox'?false:'');
+try{state={...state,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch(e){}
+function render(){
+ inputs.forEach(el=>{if(el.type==='checkbox')el.checked=!!state[el.id];else el.value=state[el.id]||''});
+ let total=0;
+ for(const [s,n] of Object.entries(sizes)){let c=0;for(let i=1;i<=n;i++)if(state[s+'_'+i])c++;total+=c;
+  document.getElementById(s+'-count').textContent=`${c} of ${n} completed`;document.getElementById(s+'-bar').value=c}
+ document.getElementById('overall-count').textContent=Math.round(total/33*100)+'%';
+ document.getElementById('overall-bar').value=total;document.getElementById('total-count').textContent=`${total} of 33 completed`;
+}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state));document.getElementById('save-status').textContent='Saved on this device'}catch(e){document.getElementById('save-status').textContent='Could not save in this browser'}}
+inputs.forEach(el=>el.addEventListener(el.type==='checkbox'?'change':'input',()=>{state[el.id]=el.type==='checkbox'?el.checked:el.value;render();save()}));
+document.querySelectorAll('[data-reset]').forEach(b=>b.addEventListener('click',()=>{resetTarget=b.dataset.reset;resetTrigger=b;document.getElementById('reset-scope').textContent=names[resetTarget];document.getElementById('confirmation').hidden=false;document.getElementById('confirmation').focus()}));
+function closeReset(){document.getElementById('confirmation').hidden=true;if(resetTrigger)resetTrigger.focus()}
+document.getElementById('cancel-reset').addEventListener('click',closeReset);
+document.getElementById('confirm-reset').addEventListener('click',()=>{for(const s of Object.keys(sizes)){if(resetTarget!=='all'&&resetTarget!==s)continue;for(let i=1;i<=sizes[s];i++)state[s+'_'+i]=false;state[s+'_notes']=''}render();save();closeReset()});
+document.getElementById('download').addEventListener('click',()=>{let t='Pet & House Sitter — Interactive Business Checklist\n\n'+document.getElementById('total-count').textContent+'\n';for(const s of Object.keys(sizes)){t+='\n'+document.querySelector(`[data-template-id="${s}-title"]`).textContent+'\n';for(let i=1;i<=sizes[s];i++){const l=document.querySelector(`[data-template-id="${s}-${i}"]`).textContent;t+=(state[s+'_'+i]?'[x] ':'[ ] ')+l+'\n'}t+='\nNotes: '+(state[s+'_notes']||'—')+'\n'}const u=URL.createObjectURL(new Blob([t],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=u;a.download='pet-house-sitter-checklist.txt';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000)});
+render();document.getElementById('save-status').textContent='Progress saves on this device';
+</script></body></html>
